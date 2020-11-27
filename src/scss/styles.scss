@@ -1,0 +1,45 @@
+@import "_extends.scss";
+@import "_mixins.scss";
+@import "../../bourbon/_bourbon.scss";
+@import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+
+
+$maincolor : #AFD5AB;
+
+body {
+    background-color: $maincolor;
+    font-family:  'Inter','Noto Sans KR', sans-serif;
+
+    a {
+        @extend %button;
+        text-decoration: none;
+    }
+      
+    button {
+        @extend %button;
+        border: none;
+    }
+    .title{
+        border: solid 10px;
+        width: 50vw;
+        @include border-color(#a60b55 #76cd9c null #e8ae1a);
+        h1 {
+            color: red;
+            @include responsive("iphone") {
+              color: yellow;
+            }
+            @include responsive("tablet") {
+                color: green;
+            }
+            // @include responsive("iphone-l") {
+            //   font-size: 60px;
+            // }
+        }
+    }
+    .img1{
+        img{
+            width: 50vw;
+        }
+    }
+}
